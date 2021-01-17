@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podly</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/podIntroduction.css">
+</head>
+<body>
+
+<div class="logo">
+    <img src="../imgs/saturnWhite.svg" alt="Logo" id="logoImg">
+    <span id="logoText">Podly</span>
+</div>
+
+<div class="panel backdrop">
+
+    <div id="innerPanel">
+        <h1>Let's meet the pod!</h1>
+        
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="2" max="20" value="10" step="1" class="slider" id="myRange">
+    </div>
+
+    <div class="podList">
+        <div id="memberCount">
+            <!-- Member count -->
+        </div>
+        <div id="memberList">
+            <!-- Members are added here -->
+        </div>
+    </div>
+    <button id="calculate">
+        Calculate!
+    </button>
+</div>
+
+
+
+<script src="../js/podIntro.js"></script>
+</body>
+
+
+</html>

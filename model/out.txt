@@ -1,0 +1,408 @@
+Created POD 0 meetingFrequency: 2
+Created Person 1 RI 5 RL 1
+Created Person 2 RI 13 RL 1
+Created Person 3 RI 5 RL 1
+Created POD 1 meetingFrequency: 4
+Created Person 4 RI 12 RL 1
+Created Person 5 RI 4 RL 1
+Created Person 6 RI 3 RL 1
+Created Person 7 RI 13 RL 1
+Created Person 8 RI 10 RL 1
+Created Person 9 RI 8 RL 1
+Created Person 10 RI 6 RL 1
+Created Person 11 RI 1 RL 1
+Created Person 12 RI 10 RL 1
+Created Person 13 RI 13 RL 1
+Created Person 14 RI 3 RL 1
+Created Person 15 RI 13 RL 1
+Created Person 16 RI 9 RL 1
+Created POD 2 meetingFrequency: 8
+Created Person 17 RI 8 RL 1
+Created Person 18 RI 14 RL 1
+Created Person 19 RI 14 RL 1
+Created Person 20 RI 3 RL 1
+Created Person 21 RI 11 RL 1
+Created Person 22 RI 11 RL 1
+Created Person 23 RI 12 RL 1
+Created Person 24 RI 6 RL 1
+Created Person 25 RI 8 RL 1
+Created Person 26 RI 4 RL 1
+Created Person 27 RI 8 RL 1
+Created POD 3 meetingFrequency: 4
+Created Person 28 RI 8 RL 1
+Created Person 29 RI 11 RL 1
+Created Person 30 RI 10 RL 1
+Created Person 31 RI 4 RL 1
+Created Person 32 RI 12 RL 1
+Created Person 33 RI 7 RL 1
+Created Person 34 RI 7 RL 1
+Created Person 35 RI 2 RL 1
+Created Person 36 RI 4 RL 1
+Created Person 37 RI 5 RL 1
+Created Person 38 RI 11 RL 1
+Created Person 39 RI 5 RL 1
+Created Person 40 RI 10 RL 1
+Created Person 41 RI 11 RL 1
+Created POD 4 meetingFrequency: 11
+Created Person 42 RI 5 RL 1
+Created Person 43 RI 9 RL 1
+Created Person 44 RI 8 RL 1
+Created Person 45 RI 14 RL 1
+Created Person 46 RI 1 RL 1
+Created Person 47 RI 4 RL 1
+DAY 1
+	Person 11 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 2
+	Person 11 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 2
+DAY 3
+	Person 6 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 4
+	Person 5 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 4
+POD meeting on day 4
+POD meeting on day 4
+DAY 5
+	Person 1 did not get covid from opening the mail
+	Person 3 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 37 did not get covid from opening the mail
+	Person 39 did not get covid from opening the mail
+	Person 42 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 6
+	Person 6 did not get covid from opening the mail
+	Person 10 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 24 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 6
+DAY 7
+	Person 11 did not get covid from opening the mail
+	Person 33 did not get covid from opening the mail
+	Person 34 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 8
+	Person 5 did not get covid from opening the mail
+	Person 9 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 17 did not get covid from opening the mail
+	Person 25 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 27 did not get covid from opening the mail
+	Person 28 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 44 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 8
+POD meeting on day 8
+POD meeting on day 8
+POD meeting on day 8
+DAY 9
+	Person 6 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 16 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 43 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 10
+	Person 1 did not get covid from opening the mail
+	Person 3 did not get covid from opening the mail
+	Person 8 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 12 did not get covid from opening the mail
+	Person 30 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 37 did not get covid from opening the mail
+	Person 39 did not get covid from opening the mail
+	Person 40 did not get covid from opening the mail
+	Person 42 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 10
+DAY 11
+	Person 11 did not get covid from opening the mail
+	Person 21 did not get covid from opening the mail
+	Person 22 did not get covid from opening the mail
+	Person 29 did not get covid from opening the mail
+	Person 38 did not get covid from opening the mail
+	Person 41 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 11
+DAY 12
+	Person 4 did not get covid from opening the mail
+	Person 5 did not get covid from opening the mail
+	Person 6 did not get covid from opening the mail
+	Person 10 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 23 did not get covid from opening the mail
+	Person 24 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 32 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 12
+POD meeting on day 12
+POD meeting on day 12
+DAY 13
+	Person 2 did not get covid from opening the mail
+	Person 7 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 13 did not get covid from opening the mail
+	Person 15 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 14
+	Person 11 did not get covid from opening the mail
+	Person 18 did not get covid from opening the mail
+	Person 19 did not get covid from opening the mail
+	Person 33 did not get covid from opening the mail
+	Person 34 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 45 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 14
+DAY 15
+	Person 1 did not get covid from opening the mail
+	Person 3 did not get covid from opening the mail
+	Person 6 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 37 did not get covid from opening the mail
+	Person 39 did not get covid from opening the mail
+	Person 42 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 16
+	Person 5 did not get covid from opening the mail
+	Person 9 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 17 did not get covid from opening the mail
+	Person 25 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 27 did not get covid from opening the mail
+	Person 28 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 44 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 16
+POD meeting on day 16
+POD meeting on day 16
+POD meeting on day 16
+DAY 17
+	Person 11 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 18
+	Person 6 did not get covid from opening the mail
+	Person 10 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 16 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 24 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 43 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 18
+DAY 19
+	Person 11 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 20
+	Person 1 did not get covid from opening the mail
+	Person 3 did not get covid from opening the mail
+	Person 5 did not get covid from opening the mail
+	Person 8 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 12 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 30 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 37 did not get covid from opening the mail
+	Person 39 did not get covid from opening the mail
+	Person 40 did not get covid from opening the mail
+	Person 42 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 20
+POD meeting on day 20
+POD meeting on day 20
+DAY 21
+	Person 6 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 33 did not get covid from opening the mail
+	Person 34 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 22
+	Person 11 did not get covid from opening the mail
+	Person 21 did not get covid from opening the mail
+	Person 22 did not get covid from opening the mail
+	Person 29 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 38 did not get covid from opening the mail
+	Person 41 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 22
+POD meeting on day 22
+DAY 23
+	Person 11 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 24
+	Person 4 did not get covid from opening the mail
+	Person 5 did not get covid from opening the mail
+	Person 6 did not get covid from opening the mail
+	Person 9 did not get covid from opening the mail
+	Person 10 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 17 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 23 did not get covid from opening the mail
+	Person 24 did not get covid from opening the mail
+	Person 25 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 27 did not get covid from opening the mail
+		Person 28 got covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 32 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 44 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 24
+POD meeting on day 24
+POD meeting on day 24
+POD meeting on day 24
+POD 3 COMPROMISED
+DAY 25
+	Person 1 did not get covid from opening the mail
+	Person 3 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 37 did not get covid from opening the mail
+	Person 39 did not get covid from opening the mail
+	Person 42 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 26
+	Person 2 did not get covid from opening the mail
+	Person 7 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 13 did not get covid from opening the mail
+	Person 15 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+POD meeting on day 26
+DAY 27
+	Person 6 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 14 did not get covid from opening the mail
+	Person 16 did not get covid from opening the mail
+	Person 20 did not get covid from opening the mail
+	Person 43 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+DAY 28
+	Person 5 did not get covid from opening the mail
+	Person 11 did not get covid from opening the mail
+	Person 18 did not get covid from opening the mail
+	Person 19 did not get covid from opening the mail
+	Person 26 did not get covid from opening the mail
+	Person 31 did not get covid from opening the mail
+	Person 33 did not get covid from opening the mail
+	Person 34 did not get covid from opening the mail
+	Person 35 did not get covid from opening the mail
+	Person 36 did not get covid from opening the mail
+	Person 45 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+	Person 47 did not get covid from opening the mail
+POD meeting on day 28
+POD meeting on day 28
+DAY 29
+	Person 11 did not get covid from opening the mail
+	Person 46 did not get covid from opening the mail
+
+
+
+
+Person 1 did NOT get COVID
+Person 2 did NOT get COVID
+Person 3 did NOT get COVID
+Person 4 did NOT get COVID
+Person 5 did NOT get COVID
+Person 6 did NOT get COVID
+Person 7 did NOT get COVID
+Person 8 did NOT get COVID
+Person 9 did NOT get COVID
+Person 10 did NOT get COVID
+Person 11 did NOT get COVID
+Person 12 did NOT get COVID
+Person 13 did NOT get COVID
+Person 14 did NOT get COVID
+Person 15 did NOT get COVID
+Person 16 did NOT get COVID
+Person 17 did NOT get COVID
+Person 18 did NOT get COVID
+Person 19 did NOT get COVID
+Person 20 did NOT get COVID
+Person 21 did NOT get COVID
+Person 22 did NOT get COVID
+Person 23 did NOT get COVID
+Person 24 did NOT get COVID
+Person 25 did NOT get COVID
+Person 26 did NOT get COVID
+Person 27 did NOT get COVID
+Person 28 Got COVID on day 24
+Person 29 Got COVID on day -1
+Person 30 Got COVID on day -1
+Person 31 Got COVID on day -1
+Person 32 Got COVID on day -1
+Person 33 Got COVID on day -1
+Person 34 Got COVID on day -1
+Person 35 Got COVID on day -1
+Person 36 Got COVID on day -1
+Person 37 Got COVID on day -1
+Person 38 Got COVID on day -1
+Person 39 Got COVID on day -1
+Person 40 Got COVID on day -1
+Person 41 Got COVID on day -1
+Person 42 did NOT get COVID
+Person 43 did NOT get COVID
+Person 44 did NOT get COVID
+Person 45 did NOT get COVID
+Person 46 did NOT get COVID
+Person 47 did NOT get COVID
+POD 0 NOT COMPROMISED
+POD 1 NOT COMPROMISED
+POD 2 NOT COMPROMISED
+POD 3 COMPROMISED on day 24 by Person 28
+POD 4 NOT COMPROMISED
+Activity: 1 Pod: 13
