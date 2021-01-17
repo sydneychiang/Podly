@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 
+
 public class Pod {
     private int id;
     private int numPeople = 0;
@@ -11,7 +12,10 @@ public class Pod {
     private boolean compromised = false;
     private int compromisedDate = -1;
     private int compromisedPerson = -1;
-    
+    private String compromiseActivity = "NA";
+    private int compromiseInterval = -1;
+    private int compromiseLimit = -1;
+
     public Pod(int meetingFrequency, int id) {
         this.id = id;
         this.meetingFrequency = meetingFrequency;
@@ -31,6 +35,9 @@ public class Pod {
                     this.compromised = true;
                     this.compromisedPerson = p.getID();
                     this.compromisedDate = daysInSim;
+                    this.compromiseActivity = p.getCompromiseActivity();
+                    this.compromiseInterval = p.getCompromiseInterval();
+                    this.compromiseLimit = p.getCompromiseLimit();
                     break;
                 }
             }
@@ -62,6 +69,37 @@ public class Pod {
     }
     public int getCompromisedPerson(){
         return this.compromisedPerson;
+    }
+    public JSONObject toJSON(){
+        System.out.println("pod to json");
+        JSONObject responseJSON= new JSONObject();
+        ArrayList<Integer> InfectedIDs = new ArrayList<Integer>();
+        ArrayList<Integer> UninfectedIDs = new ArrayList<Integer>();
+        int numInfected = 0;
+        for(Person p: people){
+            if(p.hasCovid()){
+                numInfected++;
+                InfectedIDs.add(p.getID());
+            }
+            else{
+                UninfectedIDs.add(p.getID());
+            }
+
+
+        }
+
+        responseJSON.put("isCovidFree", !compromised);
+        responseJSON.put("numInfected", numInfected);
+        responseJSON.putArrayListInteger("infectedIDs", InfectedIDs);
+        responseJSON.putArrayListInteger("unInfectedIDs", UninfectedIDs);
+        responseJSON.put("compromisedDate", compromisedDate);
+        responseJSON.put("compromiseActivity", compromiseActivity);
+        responseJSON.put("compromiseLimit", compromiseLimit); // FIX ME
+        responseJSON.put("compromiseInterval", compromiseInterval ); // FIX ME
+        
+        return responseJSON;
+        
+        
     }
    
 }    

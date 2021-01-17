@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.*;
 
+
 public class Sim{
     ArrayList <Person> everyoneInSim = new ArrayList<Person>();
     ArrayList <Pod> podsInSim = new ArrayList<Pod>();
@@ -13,8 +14,13 @@ public class Sim{
     int numPodSpread;
     int numActivitySpread; 
     
-    public Sim(){
+    // public Sim(){
+    //     Person.createHashmap();
+    // }
+
+    public Sim(int desiredNumberOfPods){
         Person.createHashmap();
+        this.createPods(desiredNumberOfPods);
     }
 
   
@@ -31,6 +37,9 @@ public class Sim{
 
         for(int i = 0; i < desiredNumberOfPods; i++){
             createPodWithRandomPeople(randBetween(2,15));
+            // createPodWithRandomPeople(1); //change
+
+
         }
     }
  
@@ -58,6 +67,8 @@ public class Sim{
     }
     private Person createRandomPerson(){
         numPeople += 1;
+        // return new Person( randBetween(1, 14),  1, "bob", numPeople); // change
+
         return new Person( randBetween(1, 14),  randBetween(1,9), "bob", numPeople);
     }
     public static int randBetween(int min, int max){
@@ -87,6 +98,16 @@ public class Sim{
             }
         }
         System.out.println("Activity: " + numActivitySpread + " Pod: " + numPodSpread);
+    }
+    public String toJSON(){
+        JSONObject responseJSON= new JSONObject();
+        for(Pod p: podsInSim){
+            System.out.println("doing a pod in sim");
+            JSONObject tempJSON = p.toJSON();
+            responseJSON.putJSONObject(p.getID(), tempJSON );
+        }
+        System.out.println("done with pods in sim");
+        return responseJSON.toString();
     }
    
 }
