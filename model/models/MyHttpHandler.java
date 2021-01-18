@@ -1,5 +1,7 @@
 package models; 
 
+import java.util.ArrayList;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -17,12 +19,13 @@ public class MyHttpHandler implements HttpHandler {
     public static void main(String [] args){
         HttpServer server;
         try{
-            server = HttpServer.create(new InetSocketAddress("localhost", 8001), 10);
+            int portNumber = 8008;
+            server = HttpServer.create(new InetSocketAddress("localhost", portNumber), 10);
             ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor)Executors.newFixedThreadPool(10);
             server.createContext("/simulation", new  MyHttpHandler());
             server.setExecutor(threadPoolExecutor);
             server.start();
-            System.out.println(" Server started on port 8001");
+            System.out.println(" Server started on port " + portNumber);
         }catch(Exception e){
             System.out.println("There was an exception lmao.");
         }
@@ -31,9 +34,12 @@ public class MyHttpHandler implements HttpHandler {
 
     public void handle(HttpExchange hExchange) throws IOException{
         String requestParamValue=null;
+        hExchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+
+        //System.out.println("httpexchange");
         if ("GET".equals(hExchange.getRequestMethod())) {
             System.out.println(hExchange.getRequestURI().toString());
-            String urlParam = hExchange.getRequestURI().toString().split("\\?")[1].split("=")[1];
+            String urlParam = hExchange.getRequestURI().toString();//.split("\\?")[1].split("=");
             handleResponse(hExchange, urlParam);
         }
     }
@@ -42,14 +48,29 @@ public class MyHttpHandler implements HttpHandler {
         OutputStreamWriter osw = new OutputStreamWriter(outputStream, "UTF-8");
         StringBuilder json = new StringBuilder();
 
-        System.out.println(requestParamValue);
+        String[] requestArray = requestParamValue.split("\\?");
+        
+        String[] params = requestArray[1].split("\\&");
+        
+        int numDays = Integer.parseInt(params[0].split("\\=")[1]);
+        ArrayList<Integer> podSizes = new ArrayList<Integer>();
 
-        Sim s = new Sim(Integer.parseInt(requestParamValue));
-        s.runSim(365);
+        //System.out.println(params.length);
+        for (int i = 1; i < params.length; i++) {
+            podSizes.add(Integer.parseInt(params[i].split("=")[1]));
+        }   
+
+        // numDays
+        // numPods --> podSizes.size()
+        // podSizes
+
+        Sim s = new Sim(podSizes.size(), podSizes);
+        s.runSim(numDays);
         System.out.println(s.toJSON());
 
 
         json.append(s.toJSON());
+        
 
         httpExchange.sendResponseHeaders(200, json.toString().length());
         osw.write(json.toString());

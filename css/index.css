@@ -8,7 +8,7 @@ body{
     color: white;
     overflow-x: hidden;
     /* background-color: #35328C; */
-    background-image: linear-gradient(123.3deg, #5A328C 0%, #35328C 121.09%);
+    background: linear-gradient(123.3deg, #5A328C 0%, #35328C 121.09%);
 }
 
 

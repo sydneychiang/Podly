@@ -1,0 +1,65 @@
+
+
+
+.backdrop{
+    background: none;
+}
+
+
+h1{
+     margin-top: 10vh;
+}
+a:hover{
+    cursor: pointer;
+}
+
+
+#low{
+    color: #B5FFFF;
+}
+
+#low-moderate{
+    color: #B5FFBC;
+}
+
+#moderate{
+    color: #FEFFB5;
+}
+
+#moderate-high{
+    color: #FFDDB5;
+}
+
+
+#high{
+    color: #FFB5B5;
+}
+
+.title{
+    font-size: 40px;
+    margin-top: 5vh;
+}
+
+.desc{
+    font-size: 20px;
+}
+
+.activities{
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 5vh;
+}
+
+.riskLvls{
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+
+
+/* .title{
+    text-align: center;
+} */

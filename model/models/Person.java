@@ -21,10 +21,11 @@ public class Person{
         this.daysInSim = 0;
         System.out.println("Created Person " + id + " RI " + riskInterval + " RL " + riskLimit);
     }
-    public void simulatePerson(){
+    public String simulatePerson(){
         this.daysInSim += 1;
         if(this.daysInSim % riskInterval == 0){
             //dice roll for getting covid w/ low probabilty, modify covidStatus if they get it
+            
             
             int max = riskLimit;
             int min = 1;
@@ -44,12 +45,14 @@ public class Person{
                     compromisedDate = daysInSim;
                     compromiseActivity = getActivityFromRiskLevel(rand);
                 }
-                System.out.println("\t\tPerson " + this.id + " got covid from " + getActivityFromRiskLevel(rand));
+                //System.out.println("\t\tPerson " + this.id + " got covid from " + compromiseActivity);
+                return "-Person " + this.id + " got covid from " + compromiseActivity;
             }
             else{
-                System.out.println("\tPerson " + this.id + " did not get covid from " + getActivityFromRiskLevel(rand));
+                return "-Person " + this.id + " did not get covid from " + getActivityFromRiskLevel(rand);
             }
         }
+        return "";
     }
     private double getChanceFromRiskLevel(int riskLevel){
         //exponent function here to convert from 1-9 to percentage chance
@@ -81,20 +84,21 @@ public class Person{
     }
 
     public static void createHashmap () {
-        hm.put(1, new ArrayList<String>(Arrays.asList(new String[]{"getting the mail"})));
-        hm.put(2, new ArrayList<String>(Arrays.asList(new String[]{"restaurant takeout", " pumping gas", " camping" })));
-        hm.put(3, new ArrayList<String>(Arrays.asList(new String[]{ "grocery shopping", "walking with others", "golfing" })));
-        hm.put(4, new ArrayList<String>(Arrays.asList(new String[]{ "restaurant dining outside ", "going to a library", "playground", })));
-        hm.put(5, new ArrayList<String>(Arrays.asList(new String[]{ "outdoor barbeque", "going to a beach", "shopping at the mall" })));
-        hm.put(6, new ArrayList<String>(Arrays.asList(new String[]{ "swimming at a public pool", "going to school", "going to day care", "going to camp", "working in an office" })));
-        hm.put(7, new ArrayList<String>(Arrays.asList(new String[]{"indoor dining at a restaurant", "getting a haircut", "shaking hands", "traveling by plane", 
-                        "attending a wedding", "attending a funeral", "playing basketball", "playing football"})));
-        hm.put(8, new ArrayList<String>(Arrays.asList(new String[]{ "eating at a buffet", "working out in a gym", "going to a movie theater" })));
-        hm.put(9, new ArrayList<String>(Arrays.asList(new String[]{ "going to a bar", "attending a church with over 500 people", "going to a stadium" })));
+        hm.put(1, new ArrayList<String>(Arrays.asList(new String[]{"Getting the mail"})));
+        hm.put(2, new ArrayList<String>(Arrays.asList(new String[]{"Getting restaurant takeout", "Pumping gas", " Camping" })));
+        hm.put(3, new ArrayList<String>(Arrays.asList(new String[]{ "Grocery shopping", "Walking with others", "Golfing" })));
+        hm.put(4, new ArrayList<String>(Arrays.asList(new String[]{ "Restaurant dining outside ", "Going to a library", "Playing at a playground", })));
+        hm.put(5, new ArrayList<String>(Arrays.asList(new String[]{ "Attending an outdoor barbeque", "Going to a beach", "Shopping at the mall" })));
+        hm.put(6, new ArrayList<String>(Arrays.asList(new String[]{ "Swimming at a public pool", "Going to school", "Going to day care", "Going to camp", "Working in an office" })));
+        hm.put(7, new ArrayList<String>(Arrays.asList(new String[]{"Indoor dining at a restaurant", "Getting a haircut", "Shaking hands", "Traveling by plane", 
+                        "Attending a wedding", "Attending a funeral", "Playing basketball", "Playing football"})));
+        hm.put(8, new ArrayList<String>(Arrays.asList(new String[]{ "Eating at a buffet", "Working out in a gym", "Going to a movie theater" })));
+        hm.put(9, new ArrayList<String>(Arrays.asList(new String[]{ "Going to a bar", "Attending a church with over 500 people", "Going to a stadium" })));
     }
     public String getCompromiseActivity(){
         return this.compromiseActivity;
     }
+    
     
     
 }

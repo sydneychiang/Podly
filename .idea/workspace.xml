@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b482807-1410-4746-8693-f0d88afd4111" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/landingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/landingPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/podIntroduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/podIntroduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/podIntro.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/podIntro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/MyHttpHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/MyHttpHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/MyHttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/MyHttpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/Sim.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/Sim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models/Sim.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/models/Sim.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="270">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -49,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="34" />
     <option name="y" value="23" />
     <option name="width" value="1406" />
@@ -115,7 +120,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="23" width="1406" height="877" extended-state="1" />
+    <frame x="34" y="23" width="1406" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20505415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -146,8 +152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="270">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>

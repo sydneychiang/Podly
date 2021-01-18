@@ -11,21 +11,21 @@ public class Sim{
     ArrayList <Pod> podsInSim = new ArrayList<Pod>();
     private int numPeople = 0;
     private int numPods = 0;
+    private ArrayList<String> simLog = new ArrayList<String>();
     int numPodSpread;
     int numActivitySpread; 
-    
-    // public Sim(){
-    //     Person.createHashmap();
-    // }
 
-    public Sim(int desiredNumberOfPods){
+    
+    
+
+    public Sim(int desiredNumberOfPods, ArrayList<Integer> podSizes){
         Person.createHashmap();
-        this.createPods(desiredNumberOfPods);
+        this.createPods(desiredNumberOfPods, podSizes);
     }
 
   
 
-    public void createPods(int desiredNumberOfPods){
+    public void createPods(int desiredNumberOfPods, ArrayList<Integer> podSizes){
         /*Pod thisPod = new Pod(14, numPods);
         numPeople += 1;
         Person p = new Person( 14,  1, "bob", numPeople);
@@ -36,7 +36,7 @@ public class Sim{
 
 
         for(int i = 0; i < desiredNumberOfPods; i++){
-            createPodWithRandomPeople(randBetween(2,15));
+            createPodWithRandomPeople(podSizes.get(i));
             // createPodWithRandomPeople(1); //change
 
 
@@ -56,12 +56,22 @@ public class Sim{
     }
     public void runSim(int numDays){
         for(int day = 1; day < numDays; day++){
-            System.out.println("DAY "+ day);
+            //System.out.println("DAY "+ day);
+            simLog.add("DAY " + day );
             for (int i = 0; i< everyoneInSim.size(); i++) {
-                everyoneInSim.get(i).simulatePerson();
+                //System.out.println("SIMULATINGPERSON");
+                //System.out.println(everyoneInSim.get(i).simulatePerson());
+                String message1 = everyoneInSim.get(i).simulatePerson();
+                if(message1.length() > 0){
+                    simLog.add(message1);
+                }
+                
             }
             for (int i = 0; i< podsInSim.size(); i++) {
-                podsInSim.get(i).simulatePod();
+                String message2 = podsInSim.get(i).simulatePod();
+                if(message2.length() > 1){
+                    simLog.add(message2);
+                }
             }
         }
     }
@@ -75,6 +85,7 @@ public class Sim{
         int range = max - min + 1;
         return (int)(Math.random() * range) + min;
     }
+    /*
     public void printReport(){
         System.out.println("\n\n\n");
         for(Person a: everyoneInSim){
@@ -99,14 +110,18 @@ public class Sim{
         }
         System.out.println("Activity: " + numActivitySpread + " Pod: " + numPodSpread);
     }
+    */
+
     public String toJSON(){
         JSONObject responseJSON= new JSONObject();
         for(Pod p: podsInSim){
-            System.out.println("doing a pod in sim");
+            //System.out.println("doing a pod in sim");
             JSONObject tempJSON = p.toJSON();
             responseJSON.putJSONObject(p.getID(), tempJSON );
         }
-        System.out.println("done with pods in sim");
+        System.out.println("simLog: " + simLog);
+        responseJSON.putArrayListString("DayByDay", this.simLog);
+        //System.out.println("done with pods in sim");
         return responseJSON.toString();
     }
    

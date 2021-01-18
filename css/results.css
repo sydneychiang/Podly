@@ -1,0 +1,168 @@
+
+.backdrop{
+    background: none;
+}
+
+
+.results{
+    background-color: #272727;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-top: 10vh;
+}
+
+.results:hover{
+    cursor: pointer;
+}
+
+.podNum{
+    font-size: 30px;
+    display: inline-block;
+    border-bottom: 1px solid #939393;
+    margin-top: 1em;
+}
+
+.bigText{
+    font-size: 60px;
+
+}
+
+.smallText{
+    font-size: 25px;
+    
+}
+
+.section{
+    display: inline-block;
+    margin: 1.5em;
+}
+
+.results div{
+    display: inline-block;
+}
+
+.content{
+    margin-bottom: 1.5em;
+
+}
+
+
+.detailedContent{
+    margin-top: 1.5em;
+}
+
+
+
+
+#testing{
+    margin-top: 2em;
+}
+
+.title{
+    font-size: 30px;
+    /* margin-top: 5vh; */
+}
+
+.desc{
+    font-size: 25px;
+
+}
+
+.backSection{
+    text-align: left;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #CFCEF2;
+    margin: auto;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    width: 80%;
+    color: #272727;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+ 
+  /* The Close Button */
+  .close {
+    color: #272727;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    color: #272727;
+  }
+
+  
+  .modal-body {
+      padding: 2px 16px;
+}
+
+
+.backSection .desc{
+    font-family: "Lora";
+    font-size: 18px;
+    margin-bottom: 4vh;
+}
+
+.rundownTitle{
+    text-align: center;  
+    margin-top: 5vh;
+    font-size: 4em;
+    margin-bottom: 5vh;
+}
+
+.rundownSection{
+    margin-bottom: 10vh;
+}
+
+.rundown{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+}
+
+ /* Add Animation */
+ @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  

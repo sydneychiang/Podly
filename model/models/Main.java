@@ -10,7 +10,7 @@ class Main {
     //    s.createPods(50);
     //    s.runSim(30);
     //    s.printReport();]
-        JSONObject obj = new JSONObject();
+        /*JSONObject obj = new JSONObject();
         obj.put("hello", "world");
         obj.put("abc", "123");
         obj.put("rishi", "godugu");
@@ -23,7 +23,13 @@ class Main {
         ArrayList<Integer> arr = new ArrayList<Integer>();
         
         obj2.putArrayListInteger("testArray", arr);
-        System.out.println(obj2.toString());
+        System.out.println(obj2.toString());*/
+        Log a = new Log("");
+        a.add("hello");
+        a.add("world");
+        System.out.println(a.get());
+
+
 
 
         

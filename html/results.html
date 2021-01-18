@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/results.css">
+</head>
+<body>
+
+<div class="logo">
+    <img src="../imgs/saturnWhite.svg" alt="Logo" id="logoImg">
+    <span id="logoText">Podly</span>
+</div>
+
+
+
+<div class="panel backdrop">
+    <div id="innerPanel">
+        <h1>Let's see how they did.</h1>
+    </div>
+
+    <div class="results">
+        <div class="podNum">Pod 1
+        </div>
+        <br>
+        <div class="content">
+            <div class="posCases section">
+                <div class="posCaseCount bigText">
+                </div>
+                <br>
+                <div class="posCaseText smallText">Positive Cases
+                </div>
+            </div>
+            <div class="firstDay section">
+                <div class="firstDayCount bigText">
+                </div>
+                <br>
+                <div class="firstDayText smallText">Day of First Case
+                </div>
+            </div>
+            <div class="culpritActivity section">
+                <div class="activityText smallText">From the Activity
+                </div>
+                <br>
+                <div class="activity bigText">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- The Modal -->
+    <div class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="podNumber">Pod 1</h2>
+            </div>
+            <div class="detailedContent">
+                <div class="pos backSection">
+                    <div class="posTitle title">
+                        Positive Cases
+                    </div>
+                    <div class="posPeople desc">Tina, Jerry, Ariana, Alicia, Tom, Harry, Josh, Alex, Michael
+                    </div>
+                </div>
+        
+                <div class="neg backSection">
+                    <div class="negTitle title">COVID-Free
+                    </div>
+                    <div class="negPeople desc">Everyone tested Positive
+                    </div>
+                </div>
+        
+                <div class="causeSection backSection">
+                    <div class="causeTitle title">Cause
+                    </div>
+                    <div class="cause desc">Jerry went to the grocery store on Day 16 and the Pod 1 met on Day 19.
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="rundownSection backSection">
+        <div class="rundownTitle title">The Run-Down
+        </div>
+        <div class="rundown desc"></div>
+    </div>
+    <!-- <button id="testing">
+        Here
+    </button> -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+<script type="module" src="../js/results.js"></script>
+</body>
+
+</html>
+

@@ -15,6 +15,7 @@ public class Pod {
     private String compromiseActivity = "NA";
     private int compromiseInterval = -1;
     private int compromiseLimit = -1;
+    
 
     public Pod(int meetingFrequency, int id) {
         this.id = id;
@@ -22,16 +23,18 @@ public class Pod {
         System.out.println("Created POD " + id + " meetingFrequency: " + meetingFrequency);
     }
  
-    public void simulatePod(){
+    public String simulatePod(){
         daysInSim += 1;
+        String returnMessage = "";
         if(!compromised && daysInSim % meetingFrequency == 0){
-            System.out.println("POD meeting on day " + daysInSim);
+            //System.out.println("POD meeting on day " + daysInSim);
+            returnMessage = "POD " + this.id + " meeting on day " + daysInSim;
             //pod meets
             boolean covidTrue = false;
             for(Person p: people){//if anyone has covid, give everyone in this pod covid
                 if(p.hasCovid()) {
                     covidTrue = true;
-                    System.out.println("POD " + this.id + " COMPROMISED");
+                    returnMessage = returnMessage+ "POD " + this.id + " COMPROMISED";
                     this.compromised = true;
                     this.compromisedPerson = p.getID();
                     this.compromisedDate = daysInSim;
@@ -47,6 +50,7 @@ public class Pod {
             }
 
         }
+        return returnMessage;
     }
     public void addPersonToPod(Person a){
         people.add(a);
@@ -85,13 +89,13 @@ public class Pod {
                 UninfectedIDs.add(p.getID());
             }
 
-
         }
 
         responseJSON.put("isCovidFree", !compromised);
         responseJSON.put("numInfected", numInfected);
         responseJSON.putArrayListInteger("infectedIDs", InfectedIDs);
         responseJSON.putArrayListInteger("unInfectedIDs", UninfectedIDs);
+        responseJSON.put("compromisedPerson", compromisedPerson);
         responseJSON.put("compromisedDate", compromisedDate);
         responseJSON.put("compromiseActivity", compromiseActivity);
         responseJSON.put("compromiseLimit", compromiseLimit); // FIX ME
