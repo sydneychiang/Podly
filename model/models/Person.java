@@ -3,8 +3,8 @@ import java.util.*;
  
 public class Person{
     private String name;
-    private final int riskInterval;// how often they go out
-    private final int riskLimit;// how risky they are 
+    private final int riskInterval; // how often they go out
+    private final int riskLimit; // how risky they are 
     private final int id;
     private int daysInSim = 0;
     private int covidStatus = 0;
@@ -26,7 +26,6 @@ public class Person{
         if(this.daysInSim % riskInterval == 0){
             //dice roll for getting covid w/ low probabilty, modify covidStatus if they get it
             
-            
             int max = riskLimit;
             int min = 1;
             int range = max - min+1;
@@ -45,7 +44,6 @@ public class Person{
                     compromisedDate = daysInSim;
                     compromiseActivity = getActivityFromRiskLevel(rand);
                 }
-                //System.out.println("\t\tPerson " + this.id + " got covid from " + compromiseActivity);
                 return "-Person " + this.id + " got covid from " + compromiseActivity;
             }
             else{

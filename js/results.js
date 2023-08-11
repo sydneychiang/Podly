@@ -129,9 +129,7 @@ function updateResultsBox(index){
     var podNum = document.getElementsByClassName("podNum");
     podNum[index].innerHTML = `Pod ${index+1}`;
 
-    // var isCovidFree = returnIsCovidFree()[index];
     console.log(returnIsCovidFree()[0]);
-    // console.log("is covid free", );
     if (isCovidFreeArr[index] !== "true"){
         posCaseCountArr[index].innerHTML = returnPositiveCases()[index];
         firstDaysArr[index].innerHTML = returnFirstCaseDay()[index];
@@ -139,7 +137,6 @@ function updateResultsBox(index){
 
     }
     else if(isCovidFreeArr[index] === "true"){
-        // console.log("no covid");
         posCaseCountArr[index].innerHTML = 0;
         firstDaysArr[index].style.display = "none";
         var firstDayText = document.getElementsByClassName("firstDayText");
@@ -150,7 +147,6 @@ function updateResultsBox(index){
     }
 }
 
-// MINUS 1???
 function updateModalBox(index){
 
     var h2Arr = document.getElementsByClassName("podNumber");
@@ -182,14 +178,9 @@ function updateModalBox(index){
 
 }
 
-
-
-
-// referenceNode comes first, newNode comes after
 function insertAfter(referenceNode, newNode) {
-
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
+}
 
 
 function updateBoxDisplays(newResultBox, newModal){
@@ -238,19 +229,15 @@ async function initFirstResultBox(){
         modals[0].style.display = "block";
     })
 
-
-
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
     var index = 0;
-
     updateResultsBox(index);
     updateModalBox(index);
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-    modals[0].style.display = "none";
+        modals[0].style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -316,7 +303,6 @@ function createResultsBox(index){
     activityBigText.classList.add("activity");
     activityBigText.classList.add("bigText");
 
-
     posCasesSection.appendChild(posCaseCountBigText);
     posCasesSection.appendChild(br);
     posCasesSection.appendChild(posCaseTextSmallText);
@@ -327,7 +313,6 @@ function createResultsBox(index){
     firstDaySection.appendChild(firstDayTextSmallText);
     console.log(firstDaySection);
 
-
     culpritActivitySection.appendChild(activityTextSmallText);
     culpritActivitySection.appendChild(br);
     culpritActivitySection.appendChild(activityBigText);
@@ -336,8 +321,6 @@ function createResultsBox(index){
     newContent.appendChild(posCasesSection);
     newContent.appendChild(firstDaySection);
     newContent.appendChild(culpritActivitySection);
-
-
     
     newResult.appendChild(newPodNum);
     newResult.appendChild(newBr);
@@ -347,7 +330,6 @@ function createResultsBox(index){
 }
 
 function createModalBox(index){
-    // var data = await getData(queryString, index);
     var modal = document.createElement("div");
     modal.classList.add("modal");
     var modalContent = document.createElement("div");
@@ -356,7 +338,7 @@ function createModalBox(index){
     modalHeader.classList.add("modal-header");
     var close = document.createElement("span");
     close.classList.add("close")
-    close.innerHTML = "&times"; //MAKE SURE THIS WORKS
+    close.innerHTML = "&times";
     var h2 = document.createElement("h2");
     h2.classList.add("podNumber");
     var detailedContent = document.createElement("div");
@@ -410,13 +392,11 @@ function createModalBox(index){
     detailedContent.appendChild(posBackSection);
     detailedContent.appendChild(negBackSection);
     detailedContent.appendChild(causeSectionBackSection);
-    // detailedContent.appendChild(rundownSectionBackSection);
 
     modalContent.appendChild(modalHeader);
     modalContent.appendChild(detailedContent);
 
     modal.appendChild(modalContent);
-
 
     return modal;
 }
