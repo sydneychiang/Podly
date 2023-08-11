@@ -1,4 +1,3 @@
-// import axios from '../js/axios';
 var data = [];
 var positiveCases = [];
 var firstCaseDay = [];
@@ -7,18 +6,6 @@ var isCovidFree = [];
 var infectedIDs = [];
 var uninfectedIDs = [];
 var DayByDay;
-
-
-
-// function getDataPodNumber(podNumber) {
-//     console.log(data);
-//     positiveCases = data.data[podNumber].numInfected;
-//     firstCaseDay = data.data[podNumber].compromisedDate;
-//     culpritActivity = data.data[podNumber].compromiseActivity;
-//     isCovidFree = data.data[podNumber].isCovidFree;
-//     infectedIDs = data.data[podNumber].infectedIDs;
-//     uninfectedIDs = data.data[podNumber].unInfectedIDs;
-// }
 
 const getData = async (queryString, podNumber) => {
     const response = await axios.get(queryString).then(function (outcome) {
@@ -73,14 +60,6 @@ function returnUninfectedIDs(){
 function returnDayByDay(){
     return DayByDay;
 }
-
-
-
-// const data = getData();
-
-// module.exports = {
-//     getData
-// }
 
 export {
     getData,

@@ -16,7 +16,6 @@ public class Pod {
     private int compromiseInterval = -1;
     private int compromiseLimit = -1;
     
-
     public Pod(int meetingFrequency, int id) {
         this.id = id;
         this.meetingFrequency = meetingFrequency;
@@ -27,11 +26,10 @@ public class Pod {
         daysInSim += 1;
         String returnMessage = "";
         if(!compromised && daysInSim % meetingFrequency == 0){
-            //System.out.println("POD meeting on day " + daysInSim);
             returnMessage = "POD " + this.id + " meeting on day " + daysInSim;
             //pod meets
             boolean covidTrue = false;
-            for(Person p: people){//if anyone has covid, give everyone in this pod covid
+            for(Person p: people){ //if anyone has covid, give everyone in this pod covid
                 if(p.hasCovid()) {
                     covidTrue = true;
                     returnMessage = returnMessage+ "POD " + this.id + " COMPROMISED";
@@ -52,28 +50,36 @@ public class Pod {
         }
         return returnMessage;
     }
+
     public void addPersonToPod(Person a){
         people.add(a);
         numPeople++;
     }
+
     public int getNumPeople(){
         return numPeople;
     }
+
     public int getMeetingFrequency(){
         return meetingFrequency;
     }
+
     public int getID(){
         return this.id;
     }
+
     public boolean compromised(){
         return this.compromised;
     }
+
     public int getCompromisedDate(){
         return this.compromisedDate;
     }
+
     public int getCompromisedPerson(){
         return this.compromisedPerson;
     }
+
     public JSONObject toJSON(){
         System.out.println("pod to json");
         JSONObject responseJSON= new JSONObject();
@@ -102,8 +108,6 @@ public class Pod {
         responseJSON.put("compromiseInterval", compromiseInterval ); // FIX ME
         
         return responseJSON;
-        
-        
     }
    
 }    

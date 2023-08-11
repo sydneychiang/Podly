@@ -1,16 +1,11 @@
 package models; 
-
-import java.util.ArrayList;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
 import java.util.concurrent.ThreadPoolExecutor;
-
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -33,13 +28,11 @@ public class MyHttpHandler implements HttpHandler {
     }
 
     public void handle(HttpExchange hExchange) throws IOException{
-        String requestParamValue=null;
         hExchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
 
-        //System.out.println("httpexchange");
         if ("GET".equals(hExchange.getRequestMethod())) {
             System.out.println(hExchange.getRequestURI().toString());
-            String urlParam = hExchange.getRequestURI().toString();//.split("\\?")[1].split("=");
+            String urlParam = hExchange.getRequestURI().toString();
             handleResponse(hExchange, urlParam);
         }
     }
@@ -55,14 +48,9 @@ public class MyHttpHandler implements HttpHandler {
         int numDays = Integer.parseInt(params[0].split("\\=")[1]);
         ArrayList<Integer> podSizes = new ArrayList<Integer>();
 
-        //System.out.println(params.length);
         for (int i = 1; i < params.length; i++) {
             podSizes.add(Integer.parseInt(params[i].split("=")[1]));
         }   
-
-        // numDays
-        // numPods --> podSizes.size()
-        // podSizes
 
         Sim s = new Sim(podSizes.size(), podSizes);
         s.runSim(numDays);
