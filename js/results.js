@@ -123,17 +123,20 @@ function initAllBoxes(){
 function updateDayByDay(){
     var rundownDesc = document.getElementsByClassName("rundown")[0];
     // dayByDayArr.map
-    var peopleIds = ""
-    for (let i = 0; i < dayByDayArr.count; i++) {
+    var tempInnerHTML = ``;
+    var peopleList = sessionStorage.people.split(",");
+    for (let i = 0; i < dayByDayArr.length; i++) {
         var rundown = dayByDayArr[i];
+        var rundownSplit = rundown.split(" ");
         if (rundown.charAt(0) == "-") {
-            var personId = rundown.split[2];
-            console.log("personId", personId);
-            peopleIds += personId;
+            let personId = Number(rundown.split(" ")[2]) - 1;
+            let person = peopleList[personId];
+            rundownSplit[1] = "";
+            rundownSplit[2] = person;
         }
-        
+        tempInnerHTML += `<div class="rundownLine">${rundownSplit.join(' ')}</div>`;
     }
-    rundownDesc.innerHTML = `${dayByDayArr.map(rundown => `<div class="rundownLine">${rundown}</div>`).join('')}`
+    rundownDesc.innerHTML = tempInnerHTML;
 }
 
 function updateResultsBox(index){
