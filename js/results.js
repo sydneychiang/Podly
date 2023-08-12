@@ -122,7 +122,6 @@ function initAllBoxes(){
 
 function updateDayByDay(){
     var rundownDesc = document.getElementsByClassName("rundown")[0];
-    // dayByDayArr.map
     var tempInnerHTML = ``;
     var peopleList = sessionStorage.people.split(",");
     for (let i = 0; i < dayByDayArr.length; i++) {
