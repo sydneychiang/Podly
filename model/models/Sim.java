@@ -39,9 +39,9 @@ public class Sim{
         for(int day = 1; day < numDays; day++){
             simLog.add("DAY " + day );
             for (int i = 0; i< everyoneInSim.size(); i++) {
-                String message1 = everyoneInSim.get(i).simulatePerson();
-                if(message1.length() > 0){
-                    simLog.add(message1);
+                String message = everyoneInSim.get(i).simulatePerson();
+                if(message.length() > 0){
+                    simLog.add(message);
                 }
                 
             }
@@ -56,7 +56,7 @@ public class Sim{
 
     private Person createRandomPerson(){
         numPeople += 1;
-        return new Person( randBetween(1, 14),  randBetween(1,9), "bob", numPeople);
+        return new Person(randBetween(1, 14), randBetween(1,9), "bob", numPeople);
     }
 
     public static int randBetween(int min, int max){

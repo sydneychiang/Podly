@@ -55,6 +55,7 @@ async function callAPI(){
     firstCaseDaysArr = returnFirstCaseDay();
     culpritActivitiesArr = returnCulpritActivity();
     infectedIDsArr = returnInfectedIDs();
+    // console.log("infectedIDsArr", infectedIDsArr);
     uninfectedIDsArr = returnUninfectedIDs();
     dayByDayArr = returnDayByDay();
     console.log(dayByDayArr)
@@ -121,7 +122,20 @@ function initAllBoxes(){
 
 function updateDayByDay(){
     var rundownDesc = document.getElementsByClassName("rundown")[0];
-    rundownDesc.innerHTML = `${dayByDayArr.map(person => `<div class="podMember">${person}</div>`).join('')}`
+    var tempInnerHTML = ``;
+    var peopleList = sessionStorage.people.split(",");
+    for (let i = 0; i < dayByDayArr.length; i++) {
+        var rundown = dayByDayArr[i];
+        var rundownSplit = rundown.split(" ");
+        if (rundown.charAt(0) == "-") {
+            let personId = Number(rundown.split(" ")[2]) - 1;
+            let person = peopleList[personId];
+            rundownSplit[1] = "";
+            rundownSplit[2] = person;
+        }
+        tempInnerHTML += `<div class="rundownLine">${rundownSplit.join(' ')}</div>`;
+    }
+    rundownDesc.innerHTML = tempInnerHTML;
 }
 
 function updateResultsBox(index){
@@ -152,15 +166,15 @@ function updateModalBox(index){
     var h2Arr = document.getElementsByClassName("podNumber");
 
     h2Arr[index].innerHTML = `Pod ${index+1}`;
+    var peopleList = sessionStorage.people.split(",");
     if (isCovidFreeArr[index] !== "true"){
-        console.log("posPeople", posPeopleDesc);
-        posPeopleDesc[index].innerHTML =  `${infectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+        posPeopleDesc[index].innerHTML =  `${infectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
 
         if(uninfectedIDsArr[index].length == 0){
             negPeopleDesc[index].innerHTML = "Everyone tested Positive";
         }
         else{
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         causeDesc[index].innerHTML = culpritActivitiesArr[index];
     }
@@ -168,10 +182,10 @@ function updateModalBox(index){
         posCaseCountArr[index].innerHTML = 0;
         posPeopleDesc[index].innerHTML =  "No one tested Positive!";
         if(uninfectedIDsArr[index].length == 0){
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         else{
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `<div class="podMember">${person}</div>`).join('')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         causeDesc[index].innerHTML = culpritActivitiesArr[index];
     }

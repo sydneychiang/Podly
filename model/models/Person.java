@@ -44,10 +44,10 @@ public class Person{
                     compromisedDate = daysInSim;
                     compromiseActivity = getActivityFromRiskLevel(rand);
                 }
-                return "-Person " + this.id + " got covid from " + compromiseActivity;
+                return "- Person " + this.id + " got COVID from " + compromiseActivity.toLowerCase();
             }
             else{
-                return "-Person " + this.id + " did not get covid from " + getActivityFromRiskLevel(rand);
+                return "- Person " + this.id + " did not get COVID from " + getActivityFromRiskLevel(rand).toLowerCase();
             }
         }
         return "";

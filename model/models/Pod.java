@@ -32,7 +32,7 @@ public class Pod {
             for(Person p: people){ //if anyone has covid, give everyone in this pod covid
                 if(p.hasCovid()) {
                     covidTrue = true;
-                    returnMessage = returnMessage+ "POD " + this.id + " COMPROMISED";
+                    returnMessage = returnMessage + " - POD " + this.id + " COMPROMISED";
                     this.compromised = true;
                     this.compromisedPerson = p.getID();
                     this.compromisedDate = daysInSim;
