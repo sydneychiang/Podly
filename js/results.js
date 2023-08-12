@@ -55,6 +55,7 @@ async function callAPI(){
     firstCaseDaysArr = returnFirstCaseDay();
     culpritActivitiesArr = returnCulpritActivity();
     infectedIDsArr = returnInfectedIDs();
+    // console.log("infectedIDsArr", infectedIDsArr);
     uninfectedIDsArr = returnUninfectedIDs();
     dayByDayArr = returnDayByDay();
     console.log(dayByDayArr)
@@ -121,7 +122,7 @@ function initAllBoxes(){
 
 function updateDayByDay(){
     var rundownDesc = document.getElementsByClassName("rundown")[0];
-    rundownDesc.innerHTML = `${dayByDayArr.map(person => `<div class="podMember">${person}</div>`).join('')}`
+    rundownDesc.innerHTML = `${dayByDayArr.map(rundown => `<div class="podMember">${rundown}</div>`).join('')}`
 }
 
 function updateResultsBox(index){
