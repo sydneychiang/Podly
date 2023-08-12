@@ -87,6 +87,11 @@ calculateBtn.addEventListener("click", function(){
         queryString += `&newPod=${people[i].length}`;
     }
     window.location.href = "results.html" + queryString;
+
+    if (typeof(Storage) !== "undefined") {
+        // Code for localStorage/sessionStorage.
+        sessionStorage.people = people;
+    }
 });
 
 function addArrToPeople(){
@@ -195,7 +200,7 @@ function removePerson(podNum){
 
 function updateMemberList(podNum){
     memberListArr[podNum-1].innerHTML = `
-    ${people[podNum-1].map(person => `<div class="podMember">${person}</div>`).join('')}`;
+    ${people[podNum-1].map(person => `<div class="rundownLine">${person}</div>`).join('')}`;
 }
 
 

@@ -122,7 +122,18 @@ function initAllBoxes(){
 
 function updateDayByDay(){
     var rundownDesc = document.getElementsByClassName("rundown")[0];
-    rundownDesc.innerHTML = `${dayByDayArr.map(rundown => `<div class="podMember">${rundown}</div>`).join('')}`
+    // dayByDayArr.map
+    var peopleIds = ""
+    for (let i = 0; i < dayByDayArr.count; i++) {
+        var rundown = dayByDayArr[i];
+        if (rundown.charAt(0) == "-") {
+            var personId = rundown.split[2];
+            console.log("personId", personId);
+            peopleIds += personId;
+        }
+        
+    }
+    rundownDesc.innerHTML = `${dayByDayArr.map(rundown => `<div class="rundownLine">${rundown}</div>`).join('')}`
 }
 
 function updateResultsBox(index){
@@ -153,15 +164,15 @@ function updateModalBox(index){
     var h2Arr = document.getElementsByClassName("podNumber");
 
     h2Arr[index].innerHTML = `Pod ${index+1}`;
+    var peopleList = sessionStorage.people.split(",");
     if (isCovidFreeArr[index] !== "true"){
-        console.log("posPeople", posPeopleDesc);
-        posPeopleDesc[index].innerHTML =  `${infectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+        posPeopleDesc[index].innerHTML =  `${infectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
 
         if(uninfectedIDsArr[index].length == 0){
             negPeopleDesc[index].innerHTML = "Everyone tested Positive";
         }
         else{
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         causeDesc[index].innerHTML = culpritActivitiesArr[index];
     }
@@ -169,10 +180,10 @@ function updateModalBox(index){
         posCaseCountArr[index].innerHTML = 0;
         posPeopleDesc[index].innerHTML =  "No one tested Positive!";
         if(uninfectedIDsArr[index].length == 0){
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${person}`).join(', ')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         else{
-            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `<div class="podMember">${person}</div>`).join('')}`;
+            negPeopleDesc[index].innerHTML = `${uninfectedIDsArr[index].map(person => `${peopleList[Number(person)-1]}`).join(', ')}`;
         }
         causeDesc[index].innerHTML = culpritActivitiesArr[index];
     }
